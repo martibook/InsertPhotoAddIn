@@ -2,8 +2,9 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import { DefaultButton } from "@fluentui/react";
 import Header from "./Header";
-import HeroList from "./HeroList";
 import Progress from "./Progress";
+
+import edith from "./../../../assets/edith.png";
 
 /* global console, Office, require */
 
@@ -15,33 +16,30 @@ export default class App extends React.Component {
     };
   }
 
-  componentDidMount() {
-    this.setState({
-      listItems: [
-        {
-          icon: "Ribbon",
-          primaryText: "Achieve more with Office integration",
-        },
-        {
-          icon: "Unlock",
-          primaryText: "Unlock features and functionality",
-        },
-        {
-          icon: "Design",
-          primaryText: "Create and visualize like a pro",
-        },
-      ],
-    });
-  }
+  insertLocalBase64Image = (callback) => {
+    const url = edith;
+    var xhr = new XMLHttpRequest();
+    xhr.onload = () => {
+      var reader = new FileReader();
+      reader.onloadend = () => {
+        const r = reader.result.replace("data:", "").replace(/^.+,/, "");
+        callback(r);
+      };
+      reader.readAsDataURL(xhr.response);
+    };
+    xhr.open("GET", url);
+    xhr.responseType = "blob";
+    xhr.send();
+  };
 
-  click = async () => {
+  insertImage = async (content) => {
     /**
      * Insert your PowerPoint code here
      */
     Office.context.document.setSelectedDataAsync(
-      "Hello World!",
+      content,
       {
-        coercionType: Office.CoercionType.Text,
+        coercionType: Office.CoercionType.Image,
       },
       (result) => {
         if (result.status === Office.AsyncResultStatus.Failed) {
@@ -49,6 +47,10 @@ export default class App extends React.Component {
         }
       }
     );
+  };
+
+  click = async () => {
+    this.insertLocalBase64Image(this.insertImage);
   };
 
   render() {
@@ -67,14 +69,9 @@ export default class App extends React.Component {
     return (
       <div className="ms-welcome">
         <Header logo={require("./../../../assets/logo-filled.png")} title={this.props.title} message="Welcome" />
-        <HeroList message="Discover!" items={this.state.listItems}>
-          <p className="ms-font-l">
-            Modify the source files, then click <b>Run</b>.
-          </p>
-          <DefaultButton className="ms-welcome__action" iconProps={{ iconName: "ChevronRight" }} onClick={this.click}>
-            Run
-          </DefaultButton>
-        </HeroList>
+        <DefaultButton className="ms-welcome__action" iconProps={{ iconName: "ChevronRight" }} onClick={this.click}>
+          Run
+        </DefaultButton>
       </div>
     );
   }
