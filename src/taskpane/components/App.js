@@ -1,7 +1,6 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { DefaultButton } from "@fluentui/react";
-import Header from "./Header";
 import Progress from "./Progress";
 
 import edith from "./../../../assets/edith.png";
@@ -68,7 +67,6 @@ export default class App extends React.Component {
 
     return (
       <div className="ms-welcome">
-        <Header logo={require("./../../../assets/logo-filled.png")} title={this.props.title} message="Welcome" />
         <DefaultButton className="ms-welcome__action" iconProps={{ iconName: "ChevronRight" }} onClick={this.click}>
           Run
         </DefaultButton>
