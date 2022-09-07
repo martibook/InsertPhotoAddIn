@@ -1,7 +1,6 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { DefaultButton } from "@fluentui/react";
-import Progress from "./Progress";
 
 import edith from "./../../../assets/edith.png";
 
@@ -53,18 +52,6 @@ export default class App extends React.Component {
   };
 
   render() {
-    const { title, isOfficeInitialized } = this.props;
-
-    if (!isOfficeInitialized) {
-      return (
-        <Progress
-          title={title}
-          logo={require("./../../../assets/logo-filled.png")}
-          message="Please sideload your addin to see app body."
-        />
-      );
-    }
-
     return (
       <div className="ms-welcome">
         <DefaultButton className="ms-welcome__action" iconProps={{ iconName: "ChevronRight" }} onClick={this.click}>
