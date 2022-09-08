@@ -30,10 +30,15 @@ module.exports = async (env, options) => {
       clean: true,
     },
     resolve: {
-      extensions: [".ts", ".tsx", ".html", ".js"],
+      extensions: [".ts", ".tsx", ".html", ".js", "css"],
+      modulesDirectories: ["node_modules"],
     },
     module: {
       rules: [
+        {
+          test: /\.css$/i,
+          use: ["style-loader", "css-loader"],
+        },
         {
           test: /\.jsx?$/,
           use: [
