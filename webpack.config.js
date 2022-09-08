@@ -31,7 +31,6 @@ module.exports = async (env, options) => {
     },
     resolve: {
       extensions: [".ts", ".tsx", ".html", ".js", "css"],
-      modulesDirectories: ["node_modules"],
     },
     module: {
       rules: [
