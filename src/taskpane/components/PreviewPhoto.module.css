@@ -1,14 +1,14 @@
 .preview_block {
-    border: 5px solid #f0f008;
+    /* border: 3px solid #f0f008; */
     text-align: center;
 }
 
 .preview_image {
-    margin: 100px 0px 0px;
+    margin: 70px 0px 0px;
 }
 
 .insert_button {
-    margin: 100px 0px 16px;
+    margin: 50px 0px 25px;
     font: 17px "Source Sans Pro";
     color: aliceblue;
     background-color: #008cea;

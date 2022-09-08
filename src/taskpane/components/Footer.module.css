@@ -1,0 +1,32 @@
+.footer_block {
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    bottom: 0px;
+}
+
+.central {
+    float: left;
+    margin: 35px 14%;
+}
+
+.left_text {
+    float: left;
+    padding: 0px;
+    font: 13px 'Trebuchet MS', sans-serif;
+    margin: 7px 10px;
+}
+
+.icon {
+    float: left;
+    padding: 0px;
+    margin: 0px;
+    width: 30px;
+}
+
+.right_text {
+    float: left;
+    padding: 0px;
+    font: 20px 'Trebuchet MS', sans-serif;
+    margin: 2px;
+}
