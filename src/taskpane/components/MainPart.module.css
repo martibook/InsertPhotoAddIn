@@ -7,3 +7,9 @@
     width: 100%;
     text-align: center;
 }
+
+.change_page {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
