@@ -42,8 +42,14 @@ const PreviewPhoto = () => {
 
   return (
     <div className={classes["preview_block"]}>
-      <img className={classes["preview_image"]} src={edith}></img>
-      <DefaultButton className={classes["insert_button"]} onClick={click}>Insert Photo</DefaultButton>
+      <div className={classes["preview_image"]}>
+        <img src={edith}></img>
+      </div>
+      <div className={classes["button_box"]}>
+        <DefaultButton className={classes["insert_button"]} onClick={click}>
+          Insert
+        </DefaultButton>
+      </div>
     </div>
   );
 };

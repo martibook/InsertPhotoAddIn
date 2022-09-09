@@ -1,13 +1,19 @@
 .footer_block {
+    /* border: 3px solid #f0f008; */
     position: absolute;
-    height: 100px;
+    top: 90%;
+    height: 10%;
     width: 100%;
-    bottom: 0px;
 }
 
 .central {
+    /* border: 3px solid #f0f008; */
+    position: absolute;
+    top: 30px;
+    left: 35px;
+    height: auto;
+    width: 225px;
     float: left;
-    margin: 35px 14%;
 }
 
 .left_text {
