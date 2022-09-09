@@ -1,9 +1,6 @@
 .preview_block {
     /* border: 3px solid #f0f008; */
-    position: absolute;
-    top: 25%;
-    left: 0px;
-    height: 65%;
+    height: 100%;
     width: 100%;
     text-align: center;
 }

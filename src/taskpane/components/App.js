@@ -1,13 +1,13 @@
 import * as React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import PreviewPhoto from "./PreviewPhoto";
+import MainPart from "./MainPart";
 
 const App = () => {
   return (
     <div>
       <Header></Header>
-      <PreviewPhoto></PreviewPhoto>
+      <MainPart></MainPart>
       <Footer></Footer>
     </div>
   );
