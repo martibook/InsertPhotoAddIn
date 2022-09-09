@@ -1,0 +1,30 @@
+.scan_block {
+    /* border: 3px solid #f0f008; */
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.central {
+    border: 3px solid whitesmoke;
+    border-radius: 1%;
+    background-color:whitesmoke;
+    box-shadow: 0px 2px 10px #999;
+}
+
+.qrcode {
+    /* border: 3px solid #f0f008; */
+    margin: 70px 0px;
+}
+
+.text_box {
+    /* border: 3px solid #f0f008; */
+    margin: 50px 0px;
+}
+
+.text {
+    font: 20px 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    color: #233;
+    padding: 0px;
+}
