@@ -1,6 +1,6 @@
 /* global document, Office, module, require */
 
-import App from "./components/App";
+import TaskPane from "./components/TaskPane";
 import { AppContainer } from "react-hot-loader";
 import { initializeIcons } from "@fluentui/font-icons-mdl2";
 import * as React from "react";
@@ -22,15 +22,15 @@ const render = (Component) => {
 /* Render application after Office initializes */
 Office.onReady(() => {
   isOfficeInitialized = true;
-  render(App);
+  render(TaskPane);
 });
 
 /* Initial render showing a progress bar */
-render(App);
+render(TaskPane);
 
 if (module.hot) {
-  module.hot.accept("./components/App", () => {
-    const NextApp = require("./components/App").default;
+  module.hot.accept("./components/TaskPane", () => {
+    const NextApp = require("./components/TaskPane").default;
     render(NextApp);
   });
 }

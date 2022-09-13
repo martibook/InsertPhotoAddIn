@@ -3,7 +3,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import MainPart from "./MainPart";
 
-const App = () => {
+const TaskPane = () => {
   return (
     <div>
       <Header></Header>
@@ -13,4 +13,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default TaskPane;
