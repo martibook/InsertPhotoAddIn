@@ -1,10 +1,12 @@
 # PPTAddIn
 
-This repo implements a PowerPoint Add-in, which is outlined in red in the following picture.
+This repo implements a PowerPoint Add-in, which is **outlined in red** in the following picture.
 The purpose is to insert photos into slides opened on PC from a personal phone
 - you don't have to pair PC and phone in advance
 - The phone can be an IOS device or Android device
 
+
+The Add-in page will display a QR code for the phone to scan
 ![image](https://github.com/martibook/PPTAddIn/assets/20094820/5c9d2d19-c6cc-4d8a-8a70-5d8e8d7e6a46)
 
 
